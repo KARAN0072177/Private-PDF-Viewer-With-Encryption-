@@ -98,9 +98,9 @@ export default function Home() {
 
   // Documents list with metadata
   const documents = useMemo(() => [
-    { file: "/api/pdf/p1.pdf", label: "CONFIDENTIAL_A", level: "TOP SECRET", size: "2.4 MB", lastAccessed: "2024-01-15" },
-    { file: "/api/pdf/p2.pdf", label: "CONFIDENTIAL_B", level: "CLASSIFIED", size: "1.8 MB", lastAccessed: "2024-01-14" },
-    { file: "/api/pdf/p3.pdf", label: "CONFIDENTIAL_C", level: "RESTRICTED", size: "3.1 MB", lastAccessed: "2024-01-13" }
+    { file: "/api/pdf/p1.pdf", label: "Android (MAD)", level: "TOP SECRET", size: "2.4 MB", lastAccessed: "2024-01-15" },
+    { file: "/api/pdf/p2.pdf", label: "NoSQL Database", level: "CLASSIFIED", size: "1.8 MB", lastAccessed: "2024-01-14" },
+    { file: "/api/pdf/p3.pdf", label: "WD-FRAMEWORK-2", level: "RESTRICTED", size: "3.1 MB", lastAccessed: "2024-01-13" }
   ], []);
 
   // Add log entry
