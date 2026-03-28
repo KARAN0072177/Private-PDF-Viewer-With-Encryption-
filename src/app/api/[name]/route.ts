@@ -1,13 +1,17 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import type { NextRequest } from "next/server";
 
 export async function GET(
-  req: Request,
-  { params }: { params: { name: string } }
+  req: NextRequest,
+  context: { params: Promise<{ name: string }> }
 ) {
   try {
-    const filePath = path.join(process.cwd(), "public", params.name);
+    // ✅ FIX: await params
+    const { name } = await context.params;
+
+    const filePath = path.join(process.cwd(), "public", name);
 
     const file = fs.readFileSync(filePath);
 
