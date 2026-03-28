@@ -52,8 +52,8 @@ export class TrafficObfuscator {
       // Fetch random CDN resources to create background traffic
       const cdnUrls = [
         'https://cdn.jsdelivr.net/npm/react/package.json',
+        'https://cdn.jsdelivr.net/npm/lodash/lodash.min.js',
         'https://fonts.googleapis.com/css2?family=Inter',
-        'https://unpkg.com/next/dist/package.json',
       ];
 
       const randomUrl = cdnUrls[Math.floor(Math.random() * cdnUrls.length)];
